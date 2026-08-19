@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Primer — Adaptive AI Private Tutor for Young Explorers</title>
+  <meta name="description" content="Adaptive, highly personalized consumer-scale AI private tutor teaching children reading, writing, and mathematics with deep patience and context." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css" />
+  <link rel="stylesheet" href="css/primer-book.css" />
+  <link rel="stylesheet" href="css/realms.css" />
+  <link rel="stylesheet" href="css/companion.css" />
+</head>
+<body>
+  <!-- Twinkling Stardust Background -->
+  <canvas id="starfield-canvas"></canvas>
+
+  <div class="primer-app">
+    <!-- Top Navigation Header -->
+    <header class="primer-header">
+      <div class="brand-section" id="brand-logo-btn">
+        <div class="brand-icon">✨</div>
+        <div>
+          <div class="brand-title">THE PRIMER</div>
+          <div class="brand-subtitle">The Young Explorer's Illustrated Codex</div>
+        </div>
+      </div>
+
+      <!-- Sovereign Realm Tabs -->
+      <nav class="realm-nav" aria-label="Learning Realms">
+        <button class="realm-tab active" data-realm="reading" id="tab-realm-reading">
+          <span>📖</span> The Scribe's Haven
+        </button>
+        <button class="realm-tab" data-realm="writing" id="tab-realm-writing">
+          <span>✍️</span> Runecrafter's Workshop
+        </button>
+        <button class="realm-tab" data-realm="math" id="tab-realm-math">
+          <span>🔢</span> Chrono-Alchemist Spire
+        </button>
+      </nav>
+
+      <!-- Right Action Cluster -->
+      <div class="header-actions">
+        <button class="btn-secondary btn-icon" id="btn-manual-mindful-pause" title="Take a Mindful Breath Pause">
+          🧘
+        </button>
+        <button class="btn-secondary btn-icon" id="btn-toggle-sound" title="Toggle Sound">
+          🔊
+        </button>
+        <button class="btn-secondary" id="btn-open-parent-portal" title="Parent & Educator Chronicle">
+          📜 Chronicle
+        </button>
+
+        <div class="learner-profile-chip" id="learner-profile-btn" title="Apprentice Profile">
+          <div class="learner-avatar-sm" id="header-learner-avatar">🦉</div>
+          <div class="learner-info">
+            <span class="learner-name" id="header-learner-name">Nell</span>
+            <span class="learner-level" id="header-learner-level">Lvl 1 • ⭐ 5</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Learning Stage -->
+    <main class="main-stage">
+      <!-- Left Column: The Grand Codex Book -->
+      <section class="codex-book-wrapper">
+        <div class="codex-book">
+          <!-- Ornate Corner Filigrees -->
+          <div class="corner-filigree corner-tl"></div>
+          <div class="corner-filigree corner-tr"></div>
+          <div class="corner-filigree corner-bl"></div>
+          <div class="corner-filigree corner-br"></div>
+
+          <!-- Book Header -->
+          <div class="book-header">
+            <div class="book-title-badge">
+              <span class="book-rune-icon" id="book-realm-icon">📖</span>
+              <div>
+                <h1 class="book-realm-title" id="book-realm-title">The Scribe's Haven</h1>
+                <div class="book-sublevel" id="book-realm-sublevel">Phonemic Alchemy & Living Stories</div>
+              </div>
+            </div>
+
+            <div class="book-controls-cluster">
+              <span style="font-size: 0.85rem; color: var(--text-parchment-muted); font-family: var(--font-kids);">
+                Adaptive Flow: <strong style="color: var(--amber-warmth);">Active</strong>
+              </span>
+            </div>
+          </div>
+
+          <!-- Living Realm Stage Body -->
+          <div class="codex-content-body" id="realm-content-container">
+            <!-- Dynamically populated by JS modules -->
+          </div>
+
+          <!-- Book Footer with Progress Track -->
+          <footer class="book-footer">
+            <div style="display: flex; align-items: center; width: 100%;">
+              <div class="progress-pill-track">
+                <div class="progress-pill-fill" id="book-progress-fill"></div>
+              </div>
+              <span class="progress-label" id="book-progress-label">72% Realm Mastery</span>
+            </div>
+          </footer>
+        </div>
+      </section>
+
+      <!-- Right Column: AI Companion Avatar & Dialogue -->
+      <aside class="companion-panel" id="companion-container">
+        <!-- Dynamically rendered by CompanionUI -->
+      </aside>
+    </main>
+  </div>
+
+  <!-- Mindful Pause Modal -->
+  <div class="mindful-modal-backdrop" id="mindful-pause-modal"></div>
+
+  <!-- Parent / Educator Chronicle Modal -->
+  <div class="mindful-modal-backdrop" id="parent-portal-modal"></div>
+
+  <!-- Application Controller Entrypoint -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

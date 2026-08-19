@@ -1,13 +1,4 @@
-# ============================================
-# Private Source Code & Core Logic
-# (Source code kept private; only README is public)
-# ============================================
-server.py
-index.html
-css/
-js/
-
-# Environment & Secrets
+# Secrets & Personal Data
 .env
 config.json
 primer_data.json
