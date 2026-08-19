@@ -1,0 +1,24 @@
+# ============================================
+# Private Source Code & Core Logic
+# (Source code kept private; only README is public)
+# ============================================
+server.py
+index.html
+css/
+js/
+
+# Environment & Secrets
+.env
+config.json
+primer_data.json
+
+# Python Cache & OS Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
